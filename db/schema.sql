@@ -1,3 +1,2 @@
-DROP DATABASE IF EXISTS newsfeed_db;
-
-CREATE DATABASE newsfeed_db;
+DROP DATABASE IF EXISTS techblog;
+CREATE DATABASE techblog;
