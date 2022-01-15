@@ -8,7 +8,8 @@ const helpers = require('./utils/helpers');
 
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  //logs user out after set time
+  cookie: { expires: 30000 },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({

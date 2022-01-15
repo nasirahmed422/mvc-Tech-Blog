@@ -17,7 +17,7 @@ function message1() {
     divEl.append(textEl2);
     setTimeout(() => {
         document.location.replace('/');
-    }, 4000);
+    }, 2000);
 }
 
 function message2() {
