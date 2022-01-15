@@ -1,7 +1,7 @@
 # mvc-Tech-Blog
 
 ## Purpose
-The purpose of this application is to build a CSM-style tech blog. This application follows the MVC paradigm. It makes use of Handlbars.ks as the templating language, Sequelize for object relational mapping, and express-session npm for authentication.
+The purpose of this application is to build a CSM-style tech blog. This application follows the MVC paradigm. It makes use of Handlbars.js as the templating language, Sequelize for object relational mapping, and express-session npm for authentication.
 
 ## Built With
 * Javascript
