@@ -3,37 +3,41 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just Tech News</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Tech Blog</title>
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Just Tech News</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main>
-      {{{ body }}}
-    </main>
-    <footer>
-      Thanks for visiting!
-    </footer>
-  </div>
-  
-  {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
+  <header>
+    <nav>
+      <div class="browse">
+        <ul class="nav-tab">
+          <li class="tab"> <a href="/">Home</a></li>
+          <li class="tab"> <a href="/dashboard">Dashboard</a></li>
+          <li class="tab"><a href="/login">Login</a></li>
+
+          <button class="tab dash-btn" id="logout">Logout</button>
+
+
+        </ul>
+      </div>
+      <div class="infoBox">
+        <div class="brand-logo">
+          <h1>The Tech Blog</h1>
+        </div>
+        <div class="notice fadeOut">
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    {{{body}}}
+  </main>
 </body>
 
 </html>
+
+<script src="../javascript/logout.js"></script>

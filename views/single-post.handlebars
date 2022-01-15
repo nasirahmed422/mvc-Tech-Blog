@@ -1,21 +1,59 @@
-{{> post-info post}}
+<section>
+    <div class="blog-card">
+        <div class="title-content">
+            <div class="title">
+                <h3>{{info.title}}</h3>
+            </div>
+            <div class="user-date">
+                <p>Posted by {{info.user.username}},{{format_date info.created_at}}</p>
+            </div>
 
-{{#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
+        </div>
+        <div class="content">
+            <p class="content-text">{{info.comment}}</p>
+        </div>
+    </div>
+</section>
 
-  <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
-  </div>
-</form>
-{{/if}}
+{{#each info.comments}}
+<section>
+    <div class="blog-card">
 
-{{> comments post.comments}}
+        <div class="title-content">
+            <div class="title">
 
-{{#if loggedIn}}
+                <p> {{user.username}} says..</p>
+
+            </div>
+
+        </div>
+        <div class="content">
+            <p> {{comment_text}} </br>
+                {{ created_at}}</p>
+        </div>
+    </div>
+    </div>
+</section>
+{{/each}}
+{{!-- comments section --}}
+<section>
+    <div class="blog-card">
+        <div class="title-content">
+            <div class="title">
+                <h3>Comment</h3>
+            </div>
+
+        </div>
+        <div class="input-box">
+            <textarea id="textBox1"
+                placeholder=" Lorem ipsum dolor sit amet consectetur adipisicing elit..."></textarea>
+        </div>
+        <div class="btn-box">
+            <button id="submitBtn" class="btn">submit</button>
+        </div>
+
+    </div>
+
+</section>
+
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
-{{/if}}
